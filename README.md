@@ -31,13 +31,13 @@ Para executar o projeto, siga as etapas abaixo:
 Certifique-se de ter o RabbitMQ instalado e em execução na máquina local ou em um servidor acessível. Para instalação e configuração do RabbitMQ, consulte a documentação oficial em https://www.rabbitmq.com/documentation.html.
 
 ### Configuração do Projeto:
-Verifique e ajuste, se necessário, as configurações de conexão ao RabbitMQ nos códigos do produtor (servidor de API) e consumidores (Java com Spring e Node.js). As configurações do RabbitMQ, como host, porta, nome de usuário e senha, normalmente são definidas em um arquivo de propriedades ou YAML (por exemplo, application.properties, application.yml) ou em variáveis de ambiente.
+Verifique e ajuste, se necessário, as configurações de conexão ao RabbitMQ nos códigos do produtor (servidor de API) e consumidores (Java com Spring e Node.js). As configurações do RabbitMQ, como host, porta, nome de usuário e senha.
 
 ### Dependências:
 Certifique-se de que todas as dependências necessárias estejam presentes no projeto. Verifique o arquivo pom.xml (Java com Spring) e o arquivo package.json (Node.js) para garantir que todas as dependências, incluindo o cliente RabbitMQ (como amqp para Node.js e spring-boot-starter-amqp para Java com Spring), estejam corretamente declaradas.
 
 ## Executando o Projeto:
-Agora, você pode iniciar o servidor de API (produtor) e os consumidores (Java com Spring e Node.js) em seus próprios containers Docker. Certifique-se de que todos os containers estejam na mesma rede Docker para permitir a comunicação entre eles.
+Inicie o servidor de API (produtor) e os consumidores (Java com Spring e Node.js) em seus próprios containers Docker. Certifique-se de que todos os containers estejam na mesma rede Docker para permitir a comunicação entre eles.
 
 ## Testando a Comunicação Assíncrona:
-Use ferramentas como Postman para enviar solicitações ao servidor de API (produtor) e observe os resultados nos consumidores de mensagens. Ao fazer uma solicitação para atualizar o estoque ou o preço de um produto, você verá as mensagens sendo consumidas e processadas pelos consumidores (Java com Spring e Node.js).
+Postman para enviar solicitações ao servidor de API (produtor) e observe os resultados nos consumidores de mensagens. Ao fazer uma solicitação para atualizar o estoque ou o preço de um produto, você verá as mensagens sendo consumidas e processadas pelos consumidores (Java com Spring e Node.js).
