@@ -19,10 +19,10 @@ O servidor de API é responsável por lidar com as solicitações de atualizaç�
 O RabbitMQ atua como intermediador de mensagens para permitir a comunicação entre os componentes do sistema. O servidor de API envia as mensagens contendo os objetos EstoqueDto e PrecoDto para filas específicas no RabbitMQ.
 
 ## Consumidor em Java com Spring:
-O primeiro consumidor é desenvolvido em Java usando o framework Spring. Ele consome as mensagens da fila RabbitmqConstantes.FILA_ESTOQUE e RabbitmqConstantes.FILA_PRECO para atualizações de estoque e preço, respectivamente. O consumidor de Java processa as informações recebidas, neste caso, apenas imprime os detalhes da atualização no console.
+O primeiro consumidor é desenvolvido em Java usando o framework Spring. Ele consome as mensagens da fila FILA_ESTOQUE  para atualizações de estoque e preço, respectivamente. O consumidor de Java processa as informações recebidas, neste caso, apenas imprime os detalhes da atualização no console.
 
 ## Consumidor em Node.js:
-O segundo consumidor é desenvolvido em Node.js. Ele consome mensagens da fila RabbitmqConstantes.FILA_ESTOQUE. O código fornecido conecta-se ao RabbitMQ, consome mensagens e imprime o conteúdo da mensagem no console. Em uma aplicação real, poderia realizar outras tarefas ou processamentos com base nas informações recebidas.
+O segundo consumidor é desenvolvido em Node.js. Ele consome mensagens da fila FILA_PRECO O código fornecido conecta-se ao RabbitMQ, consome mensagens e imprime o conteúdo da mensagem no console. Em uma aplicação real, poderia realizar outras tarefas ou processamentos com base nas informações recebidas.
 
 ## Configuração e Execução
 Para executar o projeto, siga as etapas abaixo:
